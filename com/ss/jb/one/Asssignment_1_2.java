@@ -2,12 +2,15 @@ package com.ss.jb.one;
 import java.util.Random;
 import java.util.Scanner;
 
+// Assignment 1.2
 public class Asssignment_1_2 {
 	public static void main(String[] args) {
+		// Start the guessing game
 		guessingGame();
 	}
 	
 	public static void guessingGame() {
+		// Randomly generate a number to guess and initialize variables
 		Random rand = new Random();
 		int secret = rand.nextInt(100) + 1;
 		
@@ -16,9 +19,12 @@ public class Asssignment_1_2 {
 		int guess = -100;
 		int attempts = 0;
 		
+		// Game loop
 		while(attempts < 5) {
 			System.out.println("Guess a number (1-100): ");
 			
+			// Get guess from player. Check if its a number and between 1 and 100
+			// If it is, determine if they win, lose, or need to continue
 			try {
 				guess = input.nextInt();
 			} catch (Exception e) {
